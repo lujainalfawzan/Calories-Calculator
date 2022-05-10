@@ -1,0 +1,104 @@
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Calories Calculator</title>
+      <link rel = "stylesheet" type = "text/css" href = "styles.css">
+      <!-- JavaScript Start ! -->
+      <script>
+        function mouseOver( e )
+        {  
+          var out = document.getElementById("output");
+          if ( e.target.tagName.toLowerCase() == "img" )
+          {
+              if(e.target.getAttribute( "id" ) == "burger"){
+                out.innerHTML = "<h2> Item Calories: 350 </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "hotdog"){
+                out.innerHTML = "<h2> Item Calories: 290 </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "taco"){
+                out.innerHTML = "<h2> Item Calories: 225 </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "fries"){
+                out.innerHTML = "<h2> Item Calories: 315 </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "drink"){
+                out.innerHTML = "<h2> Item Calories: 150 </h2>";
+              }
+                
+          } 
+        } 
+
+        function mouseOut( e ){
+          var out = document.getElementById("output");
+          if ( e.target.tagName.toLowerCase() == "img" )
+          {
+              if(e.target.getAttribute( "id" ) == "burger"){
+                out.innerHTML = "<h2>  </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "hotdog"){
+                out.innerHTML = "<h2>  </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "taco"){
+                out.innerHTML = "<h2>  </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "fries"){
+                out.innerHTML ="<h2>  </h2>";
+              }
+              if(e.target.getAttribute( "id" ) == "drink"){
+                out.innerHTML = "<h2>  </h2>";
+              }
+                
+          } 
+        }
+
+        document.addEventListener( "mouseover", mouseOver, false );
+        document.addEventListener( "mouseout", mouseOut, false );
+
+      </script>
+      <!-- JavaScript END ! -->
+
+   </head>
+
+
+   <body>
+     <section class="menu">
+
+
+       <h1> .... Calories Calculator .... </h1>
+       <p> Click on a menu item to know its Calories</p>
+
+
+
+      <table>
+        <tr>
+          <td><img id="burger" src="burger.png" ></td>
+          <td>Burger</td>
+        </tr>
+        <tr>
+          <td><img id="hotdog" src="hotdog.png" ></td>
+          <td>Hotdog</td>
+        </tr>
+        <tr>
+          <td><img id="taco" src="taco.png" ></td>
+          <td>Taco</td>
+        </tr>
+        <tr>
+          <td><img id="fries" src="fries.png" ></td>
+          <td>Fries</td>
+        </tr>
+        <tr>
+          <td><img id="drink" src="drink.png" ></td>
+          <td>Drink</td>
+        </tr>
+      </table>
+
+      <div>
+
+        <h2 id = "output"></h2>
+      </div>
+
+
+   </section>
+   </body>
+</html>
